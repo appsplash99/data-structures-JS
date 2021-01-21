@@ -27,7 +27,7 @@ class MyArray {           // user defined class
     let item = this.data[this.length-1]   // storing last item
     delete this.data[this.length-1]       // deleting last item in array
     this.length--;                        // decrementing array size
-    return this.data;
+    return item;                          // returning the item
   } 
 
   // insertAt - O(n)
@@ -56,7 +56,28 @@ class MyArray {           // user defined class
   }
 }
 
+// testing 
+var bunch = new MyArray;
+// console.log(bunch.data)
 
-var 
+bunch.push(6);
+bunch.push('string');
+bunch.push(-1);
+console.log(bunch)
+console.log(bunch.length)
 
+// pop
+var popped = bunch.pop()
+console.log(popped)
+console.log(bunch.length)
+console.log(bunch.data)
 
+bunch.insertAt(1, 'inserted-item')
+console.log(bunch)
+
+bunch.insertAt(2, 'ONE')
+bunch.deleteAt(1)
+
+console.log(bunch)
+
+bunch.getElementAtIndex(1)
